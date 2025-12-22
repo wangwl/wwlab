@@ -1,0 +1,15 @@
+title: "Wenliang Wang Lab"
+description: "Single-cell epigenomics, immunology, and brain aging"
+url: "https://wwlab.io"
+theme: minima
+
+header_pages:
+  - research.md
+  - people.md
+  - publications.md
+  - join.md
+  - contact.md
+
+markdown: kramdown
+plugins:
+  - jekyll-feed
