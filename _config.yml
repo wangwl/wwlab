@@ -1,12 +1,17 @@
 title: "Wenliang Wang Lab"
 description: "Single-cell epigenomics, immunology, and brain aging"
 url: "https://wwlab.io"
-theme: minima
+baseurl: ""
+timezone: "America/Los_Angeles"
+
+# Use local layouts/styles instead of a gem theme.
+theme: null
 
 header_pages:
   - research.md
   - people.md
   - publications.md
+  - news.md
   - join.md
   - contact.md
 

@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="{{ page.lang | default: site.lang | default: 'en' }}">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+
+    <title>
+      {%- if page.title and page.title != "Home" -%}
+        {{ page.title }} · {{ site.title }}
+      {%- else -%}
+        {{ site.title }}
+      {%- endif -%}
+    </title>
+
+    {%- if page.description -%}
+      <meta name="description" content="{{ page.description | escape }}" />
+    {%- else -%}
+      <meta name="description" content="{{ site.description | escape }}" />
+    {%- endif -%}
+
+    <link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}" />
+    <link rel="alternate" type="application/atom+xml" title="{{ site.title }}" href="{{ '/feed.xml' | relative_url }}" />
+  </head>
+
+  <body>
+    <a class="skip-link" href="#content">Skip to content</a>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="{{ '/' | relative_url }}">
+          <span class="brand-title">{{ site.title }}</span>
+          <span class="brand-subtitle">{{ site.description }}</span>
+        </a>
+
+        {% include nav.html %}
+      </div>
+    </header>
+
+    <main id="content" class="site-main">
+      <div class="container">
+        {{ content }}
+      </div>
+    </main>
+
+    {% include footer.html %}
+
+    <script src="{{ '/assets/js/site.js' | relative_url }}" defer></script>
+  </body>
+</html>

@@ -1,0 +1,31 @@
+---
+layout: default
+---
+
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-copy">
+      <h1 class="hero-title">{{ site.title }}</h1>
+      <p class="hero-lede">{{ site.description }}</p>
+      <div class="hero-actions">
+        <a class="btn" href="{{ '/research/' | relative_url }}">Research</a>
+        <a class="btn btn-secondary" href="{{ '/join/' | relative_url }}">Join the lab</a>
+      </div>
+    </div>
+    <div class="hero-card" aria-label="Quick info">
+      <div class="card">
+        <div class="card-title">Quick links</div>
+        <ul class="link-list">
+          <li><a href="{{ '/people/' | relative_url }}">People</a></li>
+          <li><a href="{{ '/publications/' | relative_url }}">Publications</a></li>
+          <li><a href="{{ '/news/' | relative_url }}">News</a></li>
+          <li><a href="{{ '/contact/' | relative_url }}">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="content-block">
+  {{ content }}
+</section>
